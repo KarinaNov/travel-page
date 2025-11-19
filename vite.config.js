@@ -1,0 +1,5 @@
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  base: "/travel-page/", // если репозиторий будет называться travel
+});
