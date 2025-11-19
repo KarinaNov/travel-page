@@ -1,0 +1,97 @@
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  background-color: transparent;
+  height: 80px;
+  
+  &__inner {
+    @include flex-center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 20px;
+  }
+  &__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &--scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(15, 29, 95, 0.08);
+  }
+}
+
+.nav {
+  display: none;
+
+  &__list {
+    @include flex-center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    padding: 8px 4px;
+    border-radius: 8px;
+    transition: var(--transition);
+    color: var(--muted);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.03);
+      color: var(--text);
+    }
+  }
+}
+
+.burger {
+  background: none;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-grid;
+  place-items: center;
+
+  &__lines {
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+    }
+
+    &::before {
+      top: -7px;
+    }
+    &::after {
+      top: 7px;
+    }
+  }
+}
+
+@include respond(md) {
+  .nav {
+    display: block;
+  }
+  .burger {
+    display: none;
+  }
+}

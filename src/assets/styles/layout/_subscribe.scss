@@ -1,0 +1,137 @@
+.subscribe {
+  padding: 40px 0;
+
+  &__inner {
+    position: relative;
+    background: #f8f7ff;
+    border-radius: 82px;
+    padding: 80px 40px;
+    text-align: center;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      height: 400px;
+      background: url("/img/subscribe-left.svg") no-repeat center/contain;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 420px;
+      height: 420px;
+      background: url("/img/subscribe-right.svg") no-repeat center/contain;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+    color: #5e6282;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__input-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__icon img {
+    width: 20px;
+    opacity: 0.6;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #5e6282;
+    width: 100%;
+  }
+
+  &__btn {
+    background: linear-gradient(180deg, #ff7a6e, #ff4b3a);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(255, 75, 58, 0.35);
+    transition: 0.25s;
+
+    &:hover {
+      box-shadow: 0 20px 35px rgba(255, 75, 58, 0.45);
+    }
+  }
+
+  &__plane {
+    position: absolute;
+    top: -30px;
+    right: 50px;
+    width: 110px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+/* >= tablet / <= 1024px */
+@media (max-width: 1024px) {
+  .subscribe {
+    &__inner {
+      padding: 60px 24px;
+      border-radius: 60px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .subscribe {
+    padding: 56px 0;
+
+    &__inner {
+      padding: 40px 20px;
+      border-radius: 40px;
+    }
+
+    &__plane {
+      width: 80px;
+      top: -20px;
+      right: 20px;
+    }
+  }
+}

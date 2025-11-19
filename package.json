@@ -1,0 +1,20 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "sass": "^1.94.1",
+    "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

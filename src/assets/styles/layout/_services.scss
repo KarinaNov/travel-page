@@ -1,0 +1,90 @@
+.services {
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #5e6282;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-family: "Volkhov", serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: #14183e;
+    margin: 0 0 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 140px;
+    background-image: radial-gradient(circle, #dce0f0 2px, transparent 2px);
+    background-size: 24px 24px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+/* ≥ 720px */
+@include respond(md) {
+  .services {
+    padding: 56px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 32px;
+      column-gap: 40px;
+    }
+
+    &__pattern {
+      top: 30px;
+      right: 40px;
+      opacity: 0.5;
+    }
+  }
+}
+
+/* ≥ 1024px */
+@include respond(lg) {
+  .services {
+    padding: 80px 0;
+
+    &__title {
+      margin-bottom: 48px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 40px;
+    }
+
+    &__pattern {
+      top: 40px;
+      right: 60px;
+      opacity: 0.6;
+    }
+  }
+}

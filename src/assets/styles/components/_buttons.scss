@@ -1,0 +1,49 @@
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+
+  &--outline {
+    background: transparent;
+    border: 1px solid rgba(13, 27, 42, 0.08);
+    color: #181e4b;
+
+    &:hover {
+      background: rgba(13, 27, 42, 0.05);
+      border-color: rgba(13, 27, 42, 0.15);
+    }
+  }
+
+  &--primary {
+    color: #fff;
+    background: #f1a501;
+    box-shadow: 0 20px 35px rgba(241, 165, 1, 0.15);
+    border-radius: 10px;
+
+    &:hover {
+      background: #ffb703;
+      box-shadow: 0 25px 40px rgba(241, 165, 1, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 15px 25px rgba(241, 165, 1, 0.2);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border: 1px solid rgba(13, 27, 42, 0.06);
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #686d77;
+
+    &:hover {
+      border-color: rgba(13, 27, 42, 0.15);
+      background: rgba(13, 27, 42, 0.04);
+    }
+  }
+}

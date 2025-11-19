@@ -1,0 +1,17 @@
+:root {
+  --bg: #fff9f3;
+  --text: #0d1b2a;
+  --muted: #667085;
+  --accent: #e27d60;
+  --primary: #f6b042;
+
+  --radius: 12px;
+  --container: 1200px;
+  --gap: 1.25rem;
+  --transition: 250ms cubic-bezier(.2, .9, .3, 1);
+}
+
+$bp-sm: 480px;
+$bp-md: 720px;
+$bp-lg: 1024px;
+$bp-xl: 1400px;
