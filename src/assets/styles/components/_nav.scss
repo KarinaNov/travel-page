@@ -13,9 +13,7 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 
   &__backdrop {
     position: absolute;
@@ -48,7 +46,8 @@
       border-radius: 10px;
       color: #5e6282;
       font-weight: 500;
-      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+      transition: background-color 0.2s ease, color 0.2s ease,
+        transform 0.15s ease;
 
       &:hover {
         background: rgba(88, 80, 236, 0.08);

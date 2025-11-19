@@ -3,12 +3,12 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("reveal--visible");
-        observer.unobserve(entry.target); // анимируется только один раз
+        observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.15, // 15% видимости элемента
+    threshold: 0.15,
   }
 );
 

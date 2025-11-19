@@ -11,7 +11,7 @@
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   background-color: transparent;
   height: 80px;
-  
+
   &__inner {
     @include flex-center;
     justify-content: space-between;
